@@ -1,0 +1,173 @@
+:root {
+  --crema: #fbf5ec;
+  --arena: #f1e3cf;
+  --cafe: #4a2c1a;
+  --cafe-medio: #6b3a1e;
+  --acento: #8a4b1f;
+  --blanco: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--cafe);
+  background-color: var(--crema);
+}
+
+.saltar {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: .6rem 1rem;
+  background: var(--cafe);
+  color: var(--blanco);
+  border-radius: 6px;
+  z-index: 20;
+}
+.saltar:focus { top: 1rem; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+}
+
+/* ---------- Encabezado y navegación (Flexbox) ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--cafe);
+  color: var(--blanco);
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: .8rem 1.25rem;
+}
+
+.logo { margin: 0; font-size: 1.5rem; }
+
+nav ul {
+  display: flex;
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: .5rem 1rem;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+}
+nav a:hover { background-color: var(--acento); }
+nav a:focus-visible { outline-color: var(--blanco); }
+
+main { max-width: 64rem; margin: 0 auto; padding: 0 1.25rem; }
+
+section { padding: 3rem 0; }
+
+h2 { margin: 0 0 1rem; font-size: 2rem; }
+h3 { margin: 0 0 .5rem; }
+
+.portada {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.portada-texto { flex: 1; }
+.portada img { flex: 1; width: 100%; max-width: 26rem; height: auto; border-radius: 12px; }
+
+.boton {
+  display: inline-block;
+  padding: .8rem 1.6rem;
+  background-color: var(--cafe-medio);
+  color: var(--blanco);
+  font-weight: 600;
+  text-decoration: none;
+  border: 3px solid var(--cafe-medio);
+  border-radius: 8px;
+}
+.boton:hover { background-color: var(--blanco); color: var(--cafe-medio); }
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.producto {
+  padding: 1.25rem;
+  background-color: var(--blanco);
+  border: 2px solid var(--arena);
+  border-radius: 10px;
+}
+.producto p { margin: 0 0 .75rem; }
+.precio { font-weight: 700; color: var(--acento); }
+
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.campo { margin-bottom: 1rem; }
+label { display: block; margin-bottom: .3rem; font-weight: 600; }
+
+input, textarea {
+  width: 100%;
+  padding: .65rem .75rem;
+  font: inherit;
+  color: var(--cafe);
+  background: var(--blanco);
+  border: 2px solid var(--cafe-medio);
+  border-radius: 6px;
+}
+
+button {
+  padding: .8rem 1.6rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--blanco);
+  background-color: var(--cafe-medio);
+  border: 3px solid var(--cafe-medio);
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover { background-color: var(--blanco); color: var(--cafe-medio); }
+
+address { font-style: normal; }
+
+footer {
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  background-color: var(--cafe);
+  color: var(--blanco);
+}
+footer p { margin: 0; }
+
+@media (max-width: 700px) {
+  .barra { justify-content: center; }
+  nav ul { flex-wrap: wrap; justify-content: center; }
+
+  .portada { flex-direction: column; text-align: center; }
+
+  .productos { grid-template-columns: 1fr; }
+  .contacto { grid-template-columns: 1fr; }
+
+  h2 { font-size: 1.6rem; }
+}

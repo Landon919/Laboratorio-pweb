@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Café Aroma: café de especialidad, postres y un espacio acogedor.">
+  <title>Café Aroma | Cafetería</title>
+  <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header>
+    <div class="barra">
+      <p class="logo">☕ Café Aroma</p>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Vista 1: Inicio -->
+    <section id="inicio" aria-labelledby="titulo-inicio">
+      <div class="portada">
+        <div class="portada-texto">
+          <h1 id="titulo-inicio">Bienvenido a Café Aroma</h1>
+          <p>
+            Preparamos café de especialidad todos los días, junto con postres
+            hechos en casa. Un lugar tranquilo para trabajar, estudiar o
+            conversar con amigos.
+          </p>
+          <a class="boton" href="#productos">Ver productos</a>
+        </div>
+        <img src="taza.svg" width="320" height="240"
+             alt="Taza de café humeante sobre un plato">
+      </div>
+    </section>
+
+    <!-- Vista 2: Productos -->
+    <section id="productos" aria-labelledby="titulo-productos">
+      <h2 id="titulo-productos">Nuestros productos</h2>
+      <div class="productos">
+        <article class="producto">
+          <h3>Espresso</h3>
+          <p>Café intenso, de cuerpo completo y sabor duradero.</p>
+          <p class="precio">$40</p>
+        </article>
+        <article class="producto">
+          <h3>Capuchino</h3>
+          <p>Espresso con leche vaporizada y una capa de espuma cremosa.</p>
+          <p class="precio">$55</p>
+        </article>
+        <article class="producto">
+          <h3>Café frío</h3>
+          <p>Extracción en frío de 12 horas, suave y refrescante.</p>
+          <p class="precio">$60</p>
+        </article>
+        <article class="producto">
+          <h3>Croissant</h3>
+          <p>Hojaldre de mantequilla, horneado cada mañana.</p>
+          <p class="precio">$45</p>
+        </article>
+        <article class="producto">
+          <h3>Pastel de zanahoria</h3>
+          <p>Rebanada húmeda con nueces y betún de queso crema.</p>
+          <p class="precio">$65</p>
+        </article>
+        <article class="producto">
+          <h3>Galletas de avena</h3>
+          <p>Con pasas y un toque de canela. Ideales para acompañar tu café.</p>
+          <p class="precio">$30</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Vista 3: Contacto -->
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <div class="contacto">
+        <div>
+          <h3>Visítanos</h3>
+          <address>
+            Calle Ejemplo 123, Colonia Centro<br>
+            Teléfono: <a href="tel:+520000000000">00 0000 0000</a><br>
+            Correo: <a href="mailto:hola@cafearoma.example">hola@cafearoma.example</a>
+          </address>
+          <h3>Horario</h3>
+          <p>Lunes a viernes: 7:00 a 20:00<br>Sábado y domingo: 8:00 a 18:00</p>
+        </div>
+
+        <form action="#" method="post">
+          <h3>Escríbenos</h3>
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" required>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Café Aroma. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
